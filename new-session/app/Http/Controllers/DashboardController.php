@@ -13,7 +13,7 @@ class DashboardController extends Controller
             return view('dashboard',$username);
         }
         else{
-            session()->flush('error','Please Login first!');
+            session()->flash('error','Please Login first!');
             return redirect()->route('signin');
         }
     }
