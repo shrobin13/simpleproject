@@ -19,6 +19,7 @@ class DashboardController extends Controller
     }
     public function signout(){
         Auth::logoutCurrentDevice();
+        session()->flush();
         return redirect()->route('signin');
     }
 }
